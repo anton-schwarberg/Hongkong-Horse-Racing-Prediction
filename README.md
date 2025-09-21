@@ -1,2 +1,2 @@
 # Hong-kong-Horse-Racing-Prediction
-This projects includes code that scrapes, preprocesses and predicts data from the Honkong Horse Jockey Races.
+An end-to-end machine learning project to forecast Hong Kong horse race outcomes. It starts by scraping historical race results from the official HKHJC website, then cleans and enriches the data. With the prepared dataset, it trains and evaluates ML models to estimate win/place probabilities and rank runners, using time-based splits to avoid look-ahead bias and metrics such as log loss, Brier score, AUC, and simple backtests.
