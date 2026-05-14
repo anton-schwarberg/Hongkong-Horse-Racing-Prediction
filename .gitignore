@@ -13,3 +13,6 @@ Archiv/
 # Python cache
 __pycache__/
 *.pyc
+
+# Local agent state
+.claude/
