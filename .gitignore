@@ -1,1 +1,11 @@
 venv/
+data/
+Archiv/
+
+# Data files
+*.parquet
+*.csv
+*.pkl
+
+# macOS
+.DS_Store
