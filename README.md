@@ -18,7 +18,7 @@ reads from `data/` and writes its output back to `data/`:
 | 2 | `02_Preprocessing.ipynb` | `HKHJC_FINAL.csv` | `data/HKHJ_Dataset_Prepared.csv` |
 | 3 | `03_Feature_Engineering.ipynb` | `HKHJ_Dataset_Prepared.csv` | `data/HKHJ_Dataset_Feature_Engineered.csv` |
 | 4 | `04_Prepare_Data.ipynb` | `HKHJ_Dataset_Feature_Engineered.csv` | `data/HKHJ_Dataset_After_MV.parquet` |
-| 5 | `ml.ipynb` | `HKHJ_Dataset_After_MV.parquet` | (model evaluation) |
+| 5 | `05_Modelling.ipynb` | `HKHJ_Dataset_After_MV.parquet` | (model evaluation) |
 
 Mappings (location, going, race class) and other shared code live in `src/`.
 
@@ -43,7 +43,7 @@ The yearly raw CSVs (`data/HKHJC_YYYY.csv`) are produced by `src/01_Webscraper.p
 ```bash
 python run_pipeline.py            # all five stages, ~5 min on a laptop
 python run_pipeline.py --from 03  # skip earlier stages
-python run_pipeline.py --only ml  # rerun just the model
+python run_pipeline.py --only 05  # rerun just the model
 ```
 
 Each stage is idempotent — running it again with the same input produces the

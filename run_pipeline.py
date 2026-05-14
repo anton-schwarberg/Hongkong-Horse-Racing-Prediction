@@ -7,12 +7,12 @@ reads from `data/` and writes its output back to `data/`:
     02_Preprocessing        → data/HKHJ_Dataset_Prepared.csv
     03_Feature_Engineering  → data/HKHJ_Dataset_Feature_Engineered.csv
     04_Prepare_Data         → data/HKHJ_Dataset_After_MV.parquet
-    ml                      → (trains model, no file output)
+    05_Modelling            → (trains model, no file output)
 
 Usage:
     python run_pipeline.py            # run all stages
     python run_pipeline.py --from 03  # skip earlier stages
-    python run_pipeline.py --only ml  # run a single stage
+    python run_pipeline.py --only 05  # run a single stage
 """
 
 import argparse
@@ -26,12 +26,12 @@ STAGES = [
     "02_Preprocessing.ipynb",
     "03_Feature_Engineering.ipynb",
     "04_Prepare_Data.ipynb",
-    "ml.ipynb",
+    "05_Modelling.ipynb",
 ]
 
 
 def stage_key(filename: str) -> str:
-    """'01_Combining.ipynb' -> '01', 'ml.ipynb' -> 'ml'."""
+    """'01_Combining.ipynb' -> '01', '05_Modelling.ipynb' -> '05'."""
     stem = Path(filename).stem
     return stem.split("_", 1)[0] if "_" in stem else stem
 
