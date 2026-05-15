@@ -1,11 +1,23 @@
 .venv/
 data/
 Archiv/
+.venv/
+ressources
 
 # Data files
 *.parquet
 *.csv
 *.pkl
+*.mov
 
 # macOS
+**/*.DS_Store
 .DS_Store
+.ipynb_checkpoints
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local agent state
+.claude/
